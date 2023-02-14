@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>Word Weaver Login</title>
+        <link rel="stylesheet" href="login.css">
+    </head>
+    <body>
+        <div id="main-div">
+            <img src="blue-fox.png" alt="logo">
+            <h1>Login to your account by filling your credentials</h1>
+            <form action="/login" method="post">
+                <table align="center" cellspacing="15px">
+                    <tr>
+                        <td><label>Email:</label></td>
+                        <td><input type="email" name="userEmail" placeholder="username@example.com"></td>
+                    </tr>
+                    <tr>
+                        <td><label>Password:</label></td>
+                        <td><input type="password" name="userPassword" placeholder="********"></td>
+                    </tr>
+                </table>
+                <button id="button" type="submit">Login</button>
+            </form>
+        </div>
+    </body>
+</html>

@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>Word Weaver Registration</title>
+        <link rel="stylesheet" href="register.css">
+    </head>
+    <body>
+        <div id="main-div">
+            <img src="blue-fox.png" alt="logo">
+            <h1>Fill the following form and click on Register buttton.</h1>
+            <div id="form-div">
+                <form action="/register" method="post">
+                    <table align="center" cellspacing="15px">
+                        <tr>
+                            <td><label>Name:</label></td>
+                            <td><input type="text" name="newName" placeholder="First name + Last name"></td>
+                        </tr>
+                        <tr>
+                            <td><label>Email:</label></td>
+                            <td><input type="email" name="newEmail" placeholder="name@example.com"></td>
+                        </tr>
+                        <tr>
+                            <td><label>Username:</label></td>
+                            <td><input type="text" name="newUsername" placeholder="Enter username"></td>
+                        </tr>
+                        <tr>
+                            <td><label>Password:</label></td>
+                            <td><input type="password" name="newPassword" placeholder="Atleast 8 characters"></td>
+                        </tr>
+                    </table>
+                    <button class="button-15" type="submit">Register</button>
+                </form>
+            </div>
+        </div>
+    </body>
+</html>

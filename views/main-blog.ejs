@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>Blog website homepage | Blue Fox Studios</title>
+        <link rel="stylesheet" href="main-blog.css">
+    </head>
+    <body>
+        <hr>
+        <div  id="top-heading">
+            <img src="blue-fox.png" alt="logo">
+            <h1>Hello <%= NAME %>, Welcome to Word Weaver.</h1>
+        </div>
+        <hr>
+        <div id="content">
+            <p align="center">Your posts will appear here.</p>
+            <% for(var index=0; index<headingsArray.length; index++) { %>
+                <h2><%= headingsArray[index] %></h2>
+                <p><%= contentsArray[index] %></p>
+            <% } %>
+        </div>
+        <hr>
+        <div id="main-form">
+            <form action="/main-blog" method="post">
+                <table cellspacing="15px" align="center">
+                    <tr>
+                        <td>Heading:</td>
+                        <td><input type="text" name="blogHeading" placeholder="Enter heading"></td>
+                    </tr>
+                    <tr>
+                        <td>Content:</td>
+                        <td><textarea name="blogContent" cols="50" rows="10" placeholder="Enter content"></textarea></td>
+                    </tr>
+                </table>
+                <div class="submit-button">
+                    <button align="center" class="button-85" type="submit">Add</button>
+                </div>
+            </form>
+        </div>
+        <hr>
+    </body>
+    <footer>
+        <p>Made with ❤️ by Blue Fox Studios.</p>
+    </footer>
+    <hr>
+</html>
