@@ -44,6 +44,8 @@ app.get("/main-blog",function(req,res) {
     });
 });
 
+var loggedinUserEmail = "";
+
 app.post("/register",function(req,res) {
     console.log(req.body);
     const tempUser = new USER({
@@ -59,6 +61,7 @@ app.post("/register",function(req,res) {
             res.send(err);
         }
         else {
+            loggedinUserEmail = tempUser.email;
             res.render("main-blog",{
                 NAME : tempUser.name.toUpperCase(),
                 headingsArray : tempUser.headings,
@@ -68,7 +71,7 @@ app.post("/register",function(req,res) {
     });
 });
 
-var loggedinUserEmail = "";
+// var loggedinUserEmail = "";
 
 app.post("/login",function(req,res) {
     USER.findOne({email : req.body.userEmail},function(err,foundUser) {
